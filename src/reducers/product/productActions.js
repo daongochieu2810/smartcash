@@ -3,6 +3,7 @@ import { timeoutPromise } from "../../utils/Tools";
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 export const PRODUCT_LOADING = "PRODUCT_LOADING";
 export const PRODUCT_FAILURE = "PRODUCT_FAILURE";
+
 /**
  * product format:
  * {
@@ -20,10 +21,23 @@ export const fetchProducts = () => {
       type: PRODUCT_LOADING,
     });
     try {
-      const products = [];
+      const response = await timeoutPromise(
+        fetch(`${API_URL}/product`, {
+          method: "GET",
+        })
+      );
+
+      if (!response.ok) {
+        dispatch({
+          type: PRODUCT_FAILURE,
+        });
+        throw new Error("Something went wrong!, can't get the products");
+      }
+      const resData = await response.json();
+      console.log(resData);
       dispatch({
         type: FETCH_PRODUCTS,
-        products: products,
+        products: resData.content,
       });
     } catch (err) {
       throw err;

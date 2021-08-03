@@ -83,7 +83,7 @@ export const FavoriteItem = ({ navigation, item }) => {
     return (
       <View style={{ width: 170, flexDirection: "row" }}>
         {renderRightAction(
-          "Thêm vào giỏ",
+          "Add To Cart",
           "#ffab00",
           addToCartAct,
           140,
@@ -141,7 +141,7 @@ export const FavoriteItem = ({ navigation, item }) => {
                   justifyContent: "center",
                 }}
               >
-                <ActivityIndicator size='small' color={Colors.grey} />
+                <ActivityIndicator size="small" color={Colors.grey} />
               </View>
             )}
           </TouchableOpacity>

@@ -18,13 +18,13 @@ export const Header = ({ navigation }) => {
           }}
         >
           <MaterialCommunityIcons
-            name='menu'
+            name="menu"
             size={25}
             color={Colors.light_green}
           />
         </TouchableOpacity>
       </View>
-      <CustomText style={styles.titleHeader}>Tra cứu đơn hàng</CustomText>
+      <CustomText style={styles.titleHeader}>Order Tracking</CustomText>
       <View />
     </View>
   );

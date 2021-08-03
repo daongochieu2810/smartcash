@@ -29,7 +29,12 @@ export class CategorySection extends React.PureComponent {
       return items;
     }
     return (
-      <View style={[styles.category]}>
+      <View
+        style={{
+          ...styles.category,
+          marginBottom: name === "Nearby Vouchers" ? 50 : 0,
+        }}
+      >
         <Image style={styles.background} source={bg} blurRadius={10} />
         <View style={styles.titleHeader}>
           <CustomText style={styles.title}>{name}</CustomText>
@@ -71,12 +76,11 @@ CategorySection.propTypes = {
 
 const styles = StyleSheet.create({
   category: {
-    height: 550,
+    height: 518,
     marginHorizontal: 5,
     marginVertical: 5,
     paddingVertical: 15,
     borderRadius: 5,
-    paddingBottom: 20,
     overflow: "hidden",
   },
   background: {

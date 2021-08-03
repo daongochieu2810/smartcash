@@ -63,7 +63,7 @@ export const DetailBody = ({ item, color }) => {
             textDecorationLine: "underline",
           }}
         >
-          Chi tiết
+          Details
         </CustomText>
         <View style={styles.infoContainer}>
           <CustomText>Màu sắc: </CustomText>
@@ -85,7 +85,7 @@ export const DetailBody = ({ item, color }) => {
             marginBottom: 10,
           }}
         >
-          Miêu tả
+          Description
         </CustomText>
         <CustomText selectable={true} style={styles.detail}>
           {item.description}

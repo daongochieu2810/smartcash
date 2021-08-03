@@ -49,7 +49,7 @@ export const OrderItem = ({ order }) => {
         <View style={styles.detailButtom}>
           <TouchableOpacity onPress={() => setShowDetails((prev) => !prev)}>
             <CustomText style={{ fontSize: 15, color: "#fff" }}>
-              {showDetails ? "Ẩn đơn hàng" : "Chi tiết đơn hàng"}
+              {showDetails ? "Hide order" : "Order details"}
             </CustomText>
           </TouchableOpacity>
         </View>

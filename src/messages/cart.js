@@ -1,5 +1,5 @@
 const cartMessages = {
-  'cart.add.success': 'Thêm vào giỏ hàng thành công',
-  'cart.add.fail': 'Có lỗi khi thêm giỏ hàng',
+  'cart.add.success': 'Added to cart',
+  'cart.add.fail': 'Not added to cart',
 };
 export default cartMessages;
