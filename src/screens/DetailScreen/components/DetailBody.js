@@ -24,7 +24,7 @@ export const DetailBody = ({ item, color }) => {
         style={styles.footer_header}
       >
         <CustomText selectable={true} style={{ ...styles.title, color }}>
-          {item.filename}
+          {item.name}
         </CustomText>
         <NumberFormat
           style={{ color: "#fff", fontSize: 13 }}

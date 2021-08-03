@@ -21,7 +21,7 @@ export default SearchItem = ({ item, navigation }) => {
           style={{ marginRight: 20 }}
         />
         <Image style={styles.image} source={{ uri: item.thumb }} />
-        <CustomText style={styles.name}>{item.filename}</CustomText>
+        <CustomText style={styles.name}>{item.name}</CustomText>
       </TouchableOpacity>
     </View>
   );

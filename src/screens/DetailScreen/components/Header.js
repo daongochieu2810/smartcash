@@ -58,14 +58,14 @@ export const Header = ({ navigation, scrollY, item }) => {
           <CustomText
             style={{ fontSize: 16, color: "#fff", fontWeight: "500" }}
           >
-            {item.filename}
+            {item.name}
           </CustomText>
         </Animated.View>
         <View style={styles.shareIcon}>
           <ShareItem
             imageURL={item.thumb}
-            title={item.filename}
-            message={item.filename}
+            title={item.name}
+            message={item.name}
           />
         </View>
       </View>

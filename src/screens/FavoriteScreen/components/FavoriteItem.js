@@ -53,7 +53,7 @@ export const FavoriteItem = ({ navigation, item }) => {
     try {
       await dispatch(addToCart(item));
       if (!unmounted.current) {
-        Alert.alert("Thêm thành công", "Sản phẩm đã được thêm vào giỏ hàng", [
+        Alert.alert("Added successfully", "Product has been added to cart", [
           {
             text: "OK",
           },
@@ -64,20 +64,16 @@ export const FavoriteItem = ({ navigation, item }) => {
     }
   };
   const removeFavoriteAct = () => {
-    Alert.alert(
-      "Bỏ yêu thích",
-      "Bạn có muốn bỏ sản phẩm ra khỏi mục yêu thích?",
-      [
-        {
-          text: "Hủy",
-          style: "cancel",
-        },
-        {
-          text: "Đồng ý",
-          onPress: () => dispatch(removeFavorite(item._id)),
-        },
-      ]
-    );
+    Alert.alert("Remove from favourites", "Are you sure?", [
+      {
+        text: "Cancel",
+        style: "cancel",
+      },
+      {
+        text: "Yes",
+        onPress: () => dispatch(removeFavorite(item._id)),
+      },
+    ]);
   };
   const RightActions = (progress) => {
     return (
@@ -90,7 +86,7 @@ export const FavoriteItem = ({ navigation, item }) => {
           progress
         )}
         {renderRightAction(
-          "Bỏ thích",
+          "Remove from favourites",
           Colors.red,
           removeFavoriteAct,
           30,
@@ -146,7 +142,7 @@ export const FavoriteItem = ({ navigation, item }) => {
             )}
           </TouchableOpacity>
           <View style={styles.info}>
-            <CustomText style={styles.title}>{item.filename}</CustomText>
+            <CustomText style={styles.title}>{item.name}</CustomText>
             <CustomText style={styles.subText}>{item.type}</CustomText>
             <View style={styles.rateContainer}>
               <NumberFormat
