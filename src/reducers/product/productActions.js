@@ -7,6 +7,7 @@ export const PRODUCT_FAILURE = "PRODUCT_FAILURE";
 /**
  * product format:
  * {
+ * id
  * description,
  * origin,
  * price,
