@@ -148,7 +148,7 @@ export default (props) => {
                   fontFamily: "Roboto-Medium",
                 }}
               >
-                Đăng xuất
+                Log Out
               </CustomText>
             </View>
           )}
