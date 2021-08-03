@@ -80,7 +80,7 @@ export const OrderItem = ({ order }) => {
               <Steps position={status()} />
             </View>
 
-            <CustomText style={styles.text}>Sản phẩm đã đặt:</CustomText>
+            <CustomText style={styles.text}>Ordered vouchers:</CustomText>
             <FlatList
               data={order.items}
               keyExtractor={(item) => item.item._id}

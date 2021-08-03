@@ -8,6 +8,7 @@ import {
   AUTH_FAILURE,
   FORGET_PASSWORD,
   RESET_PASSWORD,
+  UPDATE_CART,
 } from "./authActions";
 import { AsyncStorage } from "react-native";
 import UserMessages from "../../messages/user";

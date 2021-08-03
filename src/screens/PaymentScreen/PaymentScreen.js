@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import React, { useState, useEffect, useRef } from "react";
+import { View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 //Icon
-import Colors from '../../utils/Colors';
-import Loader from '../../components/Loaders/Loader';
-import { useDispatch, useSelector } from 'react-redux';
+import Colors from "../../utils/Colors";
+import Loader from "../../components/Loaders/Loader";
+import { useDispatch, useSelector } from "react-redux";
 //Action
-import { addOrder, resetCart } from '../../reducers';
+import { addOrder, resetCart } from "../../reducers";
 //Text
-import CustomText from '../../components/UI/CustomText';
-import { Header, PaymentBody } from './components';
-import { SummaryOrder } from '../PreOrderScreen/components';
+import CustomText from "../../components/UI/CustomText";
+import { Header, PaymentBody } from "./components";
+import { SummaryOrder } from "../PreOrderScreen/components";
 
 export const PaymentScreen = (props) => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ export const PaymentScreen = (props) => {
   const orderLoading = useSelector((state) => state.order.isLoading);
   let token = props.route.params.token;
   const [payByCard, setPayByCard] = useState(false);
-  const paymentMethod = payByCard ? 'Credit Card' : 'Cash';
+  const paymentMethod = payByCard ? "Credit Card" : "Cash";
   const unmounted = useRef(false);
   useEffect(() => {
     return () => {
@@ -38,18 +38,12 @@ export const PaymentScreen = (props) => {
   }, [token]);
 
   const dispatch = useDispatch();
-  const {
-    orderItems,
-    name,
-    phone,
-    total,
-    cartId,
-    fullAddress,
-  } = props.route.params;
+  const { orderItems, name, phone, total, cartId, fullAddress } =
+    props.route.params;
 
   //action Add Order
   const addOrderAct = async () => {
-    try {
+    /*try {
       token = payByCard ? token : {};
       await dispatch(
         addOrder(
@@ -59,14 +53,14 @@ export const PaymentScreen = (props) => {
           total,
           paymentMethod,
           fullAddress,
-          phone,
-        ),
+          phone
+        )
       );
       await dispatch(resetCart(cartId));
-      props.navigation.navigate('FinishOrder');
+      props.navigation.navigate("FinishOrder");
     } catch (err) {
       alert(err);
-    }
+    }*/
   };
 
   return (
@@ -88,8 +82,8 @@ export const PaymentScreen = (props) => {
           <View style={styles.total}>
             <View style={styles.orderButton}>
               <TouchableOpacity onPress={addOrderAct}>
-                <CustomText style={{ color: '#fff', fontSize: 16 }}>
-                  Tiến hành đặt hàng
+                <CustomText style={{ color: "#fff", fontSize: 16 }}>
+                  Proceed to purchase
                 </CustomText>
               </TouchableOpacity>
             </View>
@@ -102,19 +96,19 @@ export const PaymentScreen = (props) => {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: Colors.white },
   total: {
-    width: '100%',
-    position: 'absolute',
+    width: "100%",
+    position: "absolute",
     bottom: 20,
     left: 0,
     paddingHorizontal: 10,
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
   },
   orderButton: {
-    width: '100%',
+    width: "100%",
     height: 50,
     backgroundColor: Colors.red,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: 5,
     marginBottom: 5,
   },

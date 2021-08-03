@@ -20,33 +20,9 @@ export const fetchCart = () => {
         type: CART_LOADING,
       });
       try {
-        const response = await timeoutPromise(
-          fetch(`${API_URL}/cart`, {
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              "auth-token": user.token,
-            },
-            method: "GET",
-          })
-        );
-        if (!response.ok) {
-          dispatch({
-            type: CART_FAILURE,
-          });
-          throw new Error("Something went wrong!, can't get your carts");
-        }
-        const resData = await response.json();
-        const filterUserCart = resData.content.filter(
-          (userCart) => userCart.userId === user.userid
-        );
-        let carts = emptyCart;
-        if (filterUserCart.length > 0) {
-          carts = filterUserCart[0];
-        }
         dispatch({
           type: FETCH_CART,
-          carts,
+          carts: user.cart ? user.cart : emptyCart,
         });
       } catch (err) {
         throw err;
@@ -61,33 +37,8 @@ export const addToCart = (item) => {
     dispatch({
       type: CART_LOADING,
     });
-    const user = getState().auth.user;
+    //const user = getState().auth.user;
     try {
-      const response = await timeoutPromise(
-        fetch(`${API_URL}/cart/post`, {
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            "auth-token": user.token,
-          },
-          method: "POST",
-          body: JSON.stringify({
-            userId: user.userid,
-            items: [
-              {
-                item: item._id,
-                quantity: 1,
-              },
-            ],
-          }),
-        })
-      );
-      if (!response.ok) {
-        dispatch({
-          type: CART_FAILURE,
-        });
-        throw new Error("Something went wrong!");
-      }
       dispatch({
         type: "ADD_CART",
         cartItem: item,
