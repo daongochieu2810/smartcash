@@ -57,7 +57,7 @@ export class CartItem extends React.PureComponent {
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
           >
-            <CustomText style={styles.title}>{item.item.filename}</CustomText>
+            <CustomText style={styles.title}>{item.item.name}</CustomText>
             <View>
               <TouchableOpacity onPress={onRemove}>
                 <MaterialCommunityIcons name="close" size={20} color="#000" />

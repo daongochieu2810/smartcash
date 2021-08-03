@@ -49,7 +49,7 @@ const HorizontalItem = ({ item, navigation }) => {
           )}
         </TouchableOpacity>
         <View style={styles.info}>
-          <CustomText style={styles.title}>{item.filename}</CustomText>
+          <CustomText style={styles.title}>{item.name}</CustomText>
           <CustomText style={styles.subText}>Origin: {item.origin}</CustomText>
           <View style={styles.rateContainer}>
             <View style={styles.rate}>

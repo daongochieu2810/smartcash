@@ -66,7 +66,7 @@ export class ProductItem extends React.PureComponent {
             )}
           </View>
           <View style={styles.center}>
-            <CustomText style={styles.name}>{item.filename}</CustomText>
+            <CustomText style={styles.name}>{item.name}</CustomText>
           </View>
           <View style={styles.info}>
             <View style={styles.rate}>

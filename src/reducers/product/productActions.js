@@ -11,6 +11,7 @@ export const PRODUCT_FAILURE = "PRODUCT_FAILURE";
  * description,
  * origin,
  * price,
+ * name
  * standard,
  * thumb(image link),
  * }

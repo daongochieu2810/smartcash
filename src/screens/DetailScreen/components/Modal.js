@@ -22,13 +22,8 @@ const { width, height } = Dimensions.get("window");
 
 export class ModalComp extends React.PureComponent {
   render() {
-    const {
-      item,
-      color,
-      modalVisible,
-      setModalVisible,
-      navigation,
-    } = this.props;
+    const { item, color, modalVisible, setModalVisible, navigation } =
+      this.props;
     const moveToCart = () => {
       setModalVisible(false);
       navigation.navigate("Cart");
@@ -39,19 +34,19 @@ export class ModalComp extends React.PureComponent {
         style={{
           flex: 1,
         }}
-        animationType='slide'
+        animationType="slide"
         transparent={true}
         visible={modalVisible}
       >
         <View style={styles.modalContainer}></View>
         <View style={styles.modal}>
           <TouchableOpacity
-            animation='zoomIn'
+            animation="zoomIn"
             style={styles.close}
             onPress={() => setModalVisible(false)}
           >
             <MaterialCommunityIcons
-              name='window-close'
+              name="window-close"
               size={24}
               color={color}
             />
@@ -61,7 +56,7 @@ export class ModalComp extends React.PureComponent {
             style={{ width: "90%", flexDirection: "row", alignItems: "center" }}
           >
             <MaterialCommunityIcons
-              name='check-circle-outline'
+              name="check-circle-outline"
               color={color}
               size={20}
             />
@@ -84,7 +79,7 @@ export class ModalComp extends React.PureComponent {
             <View style={styles.quantity}>
               <View>
                 <CustomText style={{ ...styles.title, fontSize: 15 }}>
-                  {item.filename}
+                  {item.name}
                 </CustomText>
                 <CustomText style={{ fontSize: 12, color: Colors.grey }}>
                   Cung cấp bởi Cát Tường
