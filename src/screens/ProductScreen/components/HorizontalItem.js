@@ -53,7 +53,7 @@ const HorizontalItem = ({ item, navigation }) => {
           <CustomText style={styles.subText}>Xuất xứ {item.origin}</CustomText>
           <View style={styles.rateContainer}>
             <View style={styles.rate}>
-              <AntDesign name="star" color="#fed922" size={15} />
+              <AntDesign name="star" color={Colors.red} size={15} />
               <CustomText style={styles.score}>4.5</CustomText>
             </View>
             <NumberFormat price={item.price} />

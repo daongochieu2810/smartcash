@@ -84,7 +84,7 @@ export const FavoriteItem = ({ navigation, item }) => {
       <View style={{ width: 170, flexDirection: "row" }}>
         {renderRightAction(
           "Add To Cart",
-          "#ffab00",
+          Colors.red,
           addToCartAct,
           140,
           progress

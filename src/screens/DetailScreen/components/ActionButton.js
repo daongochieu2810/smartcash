@@ -86,7 +86,7 @@ export const ActionButton = ({
       <View style={styles.action}>
         <TouchableOpacity
           onPress={toggleFavorite}
-          style={[styles.favorite, { borderColor: color }]}
+          style={[styles.favorite, { borderColor: Colors.citiblue }]}
         >
           {FavoriteProducts ? (
             <LottieView
@@ -95,7 +95,7 @@ export const ActionButton = ({
               loop={false}
             />
           ) : (
-            <Ionicons name="ios-heart-empty" size={27} color={color} />
+            <Ionicons name="ios-heart-empty" size={27} color={Colors.citired} />
           )}
         </TouchableOpacity>
         <TouchableOpacity

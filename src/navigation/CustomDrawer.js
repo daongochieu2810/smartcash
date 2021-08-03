@@ -27,7 +27,7 @@ import { Logout as LogoutAction } from "../reducers";
 import { OpenURL } from "../utils/Tools";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const fbURL = "https://www.facebook.com/daquyankhangthinhvuong/";
+const fbURL = "https://www.facebook.com/";
 const youtubeURL = "https://www.youtube.com/";
 
 //custom drawer content
@@ -81,7 +81,7 @@ export default (props) => {
               <View style={{ justifyContent: "center" }}>
                 <Text
                   style={{
-                    color: Colors.green,
+                    color: Colors.black,
                     fontSize: 18,
                     paddingHorizontal: 10,
                     paddingVertical: 0,
@@ -108,19 +108,29 @@ export default (props) => {
           <View style={styles.social}>
             <OpenURL url={fbURL}>
               <Image
-                style={{ resizeMode: "contain", width: 80, height: 80 }}
+                style={{ resizeMode: "contain", width: 40, height: 40 }}
                 source={require("../assets/Images/social1.png")}
               />
             </OpenURL>
             <OpenURL url={youtubeURL}>
               <Image
-                style={{ resizeMode: "contain", width: 80, height: 80 }}
+                style={{
+                  resizeMode: "contain",
+                  width: 40,
+                  height: 40,
+                  marginLeft: 10,
+                }}
                 source={require("../assets/Images/social3.png")}
               />
             </OpenURL>
             <OpenURL url={fbURL}>
               <Image
-                style={{ resizeMode: "contain", width: 80, height: 80 }}
+                style={{
+                  resizeMode: "contain",
+                  width: 40,
+                  height: 40,
+                  marginLeft: 10,
+                }}
                 source={require("../assets/Images/social2.png")}
               />
             </OpenURL>
@@ -199,7 +209,7 @@ const styles = StyleSheet.create({
   social: {
     marginTop: 20,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     marginHorizontal: 10,
   },
   logout: {
