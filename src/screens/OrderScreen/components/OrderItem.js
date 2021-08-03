@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   detail: {
-    color: Colors.lighter_green,
+    color: Colors.citired,
   },
   steps: {
     width: "100%",

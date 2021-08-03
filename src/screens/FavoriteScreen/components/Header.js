@@ -14,11 +14,7 @@ export const Header = ({ navigation }) => {
     <View style={styles.header}>
       <View style={{ position: "absolute", bottom: 10, left: 15, zIndex: 10 }}>
         <TouchableOpacity onPress={() => navigation.navigate("HomeTab")}>
-          <Ionicons
-            name="ios-arrow-back"
-            size={28}
-            color={Colors.lighter_green}
-          />
+          <Ionicons name="ios-arrow-back" size={28} color={Colors.light_grey} />
         </TouchableOpacity>
       </View>
       <CustomText style={styles.title}>Favourites</CustomText>
@@ -27,7 +23,7 @@ export const Header = ({ navigation }) => {
           style={{ marginBottom: 10 }}
           name="heart-multiple"
           size={25}
-          color={Colors.red}
+          color={Colors.citired}
         />
       </View>
     </View>

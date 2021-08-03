@@ -81,7 +81,7 @@ export default (props) => {
               <View style={{ justifyContent: "center" }}>
                 <Text
                   style={{
-                    color: Colors.green,
+                    color: Colors.black,
                     fontSize: 18,
                     paddingHorizontal: 10,
                     paddingVertical: 0,

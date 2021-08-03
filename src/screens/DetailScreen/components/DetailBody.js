@@ -34,19 +34,19 @@ export const DetailBody = ({ item, color }) => {
       </Animatable.View>
       <View style={{ flexDirection: "row", marginTop: 10 }}>
         <Animatable.View animation="bounceIn" delay={1600}>
-          <AntDesign name="star" size={15} color={color} />
+          <AntDesign name="star" size={15} color={Colors.citired} />
         </Animatable.View>
         <Animatable.View animation="bounceIn" delay={1700}>
-          <AntDesign name="star" size={15} color={color} />
+          <AntDesign name="star" size={15} color={Colors.citired} />
         </Animatable.View>
         <Animatable.View animation="bounceIn" delay={1800}>
-          <AntDesign name="star" size={15} color={color} />
+          <AntDesign name="star" size={15} color={Colors.citired} />
         </Animatable.View>
         <Animatable.View animation="bounceIn" delay={1900}>
-          <AntDesign name="star" size={15} color={color} />
+          <AntDesign name="star" size={15} color={Colors.citired} />
         </Animatable.View>
         <Animatable.View animation="bounceIn" delay={2000}>
-          <AntDesign name="star" size={15} color={color} />
+          <AntDesign name="star" size={15} color={Colors.citired} />
         </Animatable.View>
       </View>
       <Animatable.View
