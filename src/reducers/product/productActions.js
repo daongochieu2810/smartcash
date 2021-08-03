@@ -26,7 +26,7 @@ export const PRODUCT_FAILURE = "PRODUCT_FAILURE";
 const products = [
   {
     _id: 0,
-    filename: "GrabFood $20",
+    name: "GrabFood $20",
     description:
       "Your favourite food delivered hot and fresh! Satisfy your cravings by getting the food you love from your favourite restaurants. GrabFood is available islandwide. Enjoy this $20 QR Voucher.",
     origin: "Singapore",
@@ -37,7 +37,7 @@ const products = [
   },
   {
     _id: 1,
-    filename: "Courts $20",
+    name: "Courts $20",
     description:
       "Singapore’s Leading Consumer Electronics, IT & Furniture Store. Enjoy this $20 QR Voucher.",
     origin: "Singapore",
@@ -49,7 +49,7 @@ const products = [
   },
   {
     _id: 2,
-    filename: "Nike $20",
+    name: "Nike $20",
     description: "Just Do It! Enjoy this $20 QR Voucher.",
     origin: "Singapore",
     price: 10,
@@ -60,7 +60,7 @@ const products = [
   },
   {
     _id: 3,
-    filename: "Adidas $20",
+    name: "Adidas $20",
     description:
       "Shop for adidas shoes, clothing and collections, adidas Originals, Running, Football, Training and more on the official adidas SG website. Enjoy this $20 QR Voucher.",
     origin: "Singapore",
@@ -71,7 +71,7 @@ const products = [
   },
   {
     _id: 4,
-    filename: "Redmart $15",
+    name: "Redmart $15",
     description:
       "Buy Groceries At The Best Prices Online With Our Price Match Promise On RedMart. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -82,7 +82,7 @@ const products = [
   },
   {
     _id: 5,
-    filename: "Deliveroo $15",
+    name: "Deliveroo $15",
     description:
       "The best local restaurants and takeaways are here to deliver. Order on Deliveroo today! Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -94,7 +94,7 @@ const products = [
   },
   {
     _id: 6,
-    filename: "GrabFood $15",
+    name: "GrabFood $15",
     description:
       "Your favourite food delivered hot and fresh! Satisfy your cravings by getting the food you love from your favourite restaurants. GrabFood is available islandwide. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -105,7 +105,7 @@ const products = [
   },
   {
     _id: 7,
-    filename: "Courts $15",
+    name: "Courts $15",
     description:
       "Singapore’s Leading Consumer Electronics, IT & Furniture Store. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -117,7 +117,7 @@ const products = [
   },
   {
     _id: 8,
-    filename: "Redmart $15",
+    name: "Redmart $15",
     description:
       "Buy Groceries At The Best Prices Online With Our Price Match Promise On RedMart. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -128,7 +128,7 @@ const products = [
   },
   {
     _id: 9,
-    filename: "Deliveroo $15",
+    name: "Deliveroo $15",
     description:
       "The best local restaurants and takeaways are here to deliver. Order on Deliveroo today! Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -140,7 +140,7 @@ const products = [
   },
   {
     _id: 10,
-    filename: "Courts $15",
+    name: "Courts $15",
     description:
       "Singapore’s Leading Consumer Electronics, IT & Furniture Store. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
@@ -152,7 +152,7 @@ const products = [
   },
   {
     _id: 11,
-    filename: "GrabFood $15",
+    name: "GrabFood $15",
     description:
       "Your favourite food delivered hot and fresh! Satisfy your cravings by getting the food you love from your favourite restaurants. GrabFood is available islandwide. Enjoy this $15 QR Voucher.",
     origin: "Singapore",
