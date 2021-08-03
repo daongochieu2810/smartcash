@@ -49,6 +49,7 @@ export class CartItem extends React.PureComponent {
               resizeMode: "stretch",
               borderRadius: 5,
             }}
+            resizeMode="contain"
             source={{ uri: item.item.thumb }}
           />
         </View>

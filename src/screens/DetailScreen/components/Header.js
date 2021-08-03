@@ -63,7 +63,7 @@ export const Header = ({ navigation, scrollY, item }) => {
         </Animated.View>
         <View style={styles.shareIcon}>
           <ShareItem
-            imageURL={item.url}
+            imageURL={item.thumb}
             title={item.filename}
             message={item.filename}
           />
@@ -83,7 +83,7 @@ export const Header = ({ navigation, scrollY, item }) => {
         }}
       ></Animated.View>
       <Animated.Image
-        source={{ uri: item.url }}
+        source={{ uri: item.thumb }}
         style={[
           styles.image,
           {
@@ -127,6 +127,6 @@ const styles = StyleSheet.create({
     right: 0,
     width: null,
     height: HEADER_MAX_HEIGHT,
-    resizeMode: "stretch",
+    resizeMode: "contain",
   },
 });

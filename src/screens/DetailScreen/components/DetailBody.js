@@ -66,15 +66,15 @@ export const DetailBody = ({ item, color }) => {
           Details
         </CustomText>
         <View style={styles.infoContainer}>
-          <CustomText>Màu sắc: </CustomText>
+          <CustomText>Color: </CustomText>
           <CustomText style={{ color: color }}>{item.color}</CustomText>
         </View>
         <View style={styles.infoContainer}>
-          <CustomText>Tình trạng: </CustomText>
+          <CustomText>Status: </CustomText>
           <CustomText>{item.standard}</CustomText>
         </View>
         <View style={styles.infoContainer}>
-          <CustomText>Xuất xứ: </CustomText>
+          <CustomText>Origin: </CustomText>
           <CustomText>{item.origin}</CustomText>
         </View>
         <CustomText

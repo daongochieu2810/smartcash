@@ -42,8 +42,9 @@ export class ProductItem extends React.PureComponent {
           >
             <TouchableOpacity onPress={toDetail}>
               <Image
-                source={{ uri: item.url }}
+                source={{ uri: item.thumb }}
                 style={styles.image}
+                resizeMode="contain"
                 onLoadStart={() => {
                   this.setState({ loading: true });
                 }}

@@ -50,7 +50,7 @@ const HorizontalItem = ({ item, navigation }) => {
         </TouchableOpacity>
         <View style={styles.info}>
           <CustomText style={styles.title}>{item.filename}</CustomText>
-          <CustomText style={styles.subText}>Xuất xứ {item.origin}</CustomText>
+          <CustomText style={styles.subText}>Origin: {item.origin}</CustomText>
           <View style={styles.rateContainer}>
             <View style={styles.rate}>
               <AntDesign name="star" color={Colors.red} size={15} />

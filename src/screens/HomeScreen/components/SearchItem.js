@@ -15,7 +15,7 @@ export default SearchItem = ({ item, navigation }) => {
         style={{ flexDirection: "row", alignItems: "center" }}
       >
         <Ionicons
-          name='ios-search'
+          name="ios-search"
           size={22}
           color={Colors.grey}
           style={{ marginRight: 20 }}
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   image: {
     height: 50,
     width: 70,
-    resizeMode: "stretch",
+    resizeMode: "contain",
     borderRadius: 10,
     marginRight: 30,
   },
