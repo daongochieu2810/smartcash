@@ -65,10 +65,10 @@ export const DetailBody = ({ item, color }) => {
         >
           Details
         </CustomText>
-        <View style={styles.infoContainer}>
+        {/* <View style={styles.infoContainer}>
           <CustomText>Color: </CustomText>
           <CustomText style={{ color: color }}>{item.color}</CustomText>
-        </View>
+        </View> */}
         <View style={styles.infoContainer}>
           <CustomText>Status: </CustomText>
           <CustomText>{item.standard}</CustomText>
