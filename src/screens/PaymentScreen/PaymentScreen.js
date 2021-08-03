@@ -43,24 +43,13 @@ export const PaymentScreen = (props) => {
 
   //action Add Order
   const addOrderAct = async () => {
-    /*try {
-      token = payByCard ? token : {};
-      await dispatch(
-        addOrder(
-          token,
-          orderItems,
-          name,
-          total,
-          paymentMethod,
-          fullAddress,
-          phone
-        )
-      );
-      await dispatch(resetCart(cartId));
+    try {
+      //await dispatch(addOrder(orderItems, name, total, paymentMethod));
+      //await dispatch(resetCart(cartId));
       props.navigation.navigate("FinishOrder");
     } catch (err) {
       alert(err);
-    }*/
+    }
   };
 
   return (

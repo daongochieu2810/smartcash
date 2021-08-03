@@ -16,8 +16,6 @@ export const PreOrderScreen = (props) => {
   const [loading, setLoading] = useState(true);
   const carts = useSelector((state) => state.cart.cartItems);
   const { cartItems, total, cartId } = props.route.params;
-  const [error, setError] = useState("");
-  //Can Toi uu lai
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
@@ -38,42 +36,25 @@ export const PreOrderScreen = (props) => {
     }
     return;
   }, [isFocused]);
-  const getInfo = (province, town) => {
-    setProvince(province);
-    setTown(town);
-  };
-  const getReceiver = (name, phone, address) => {
-    setName(name);
-    setPhone(phone);
-    setAddress(address);
-  };
-  const checkValidation = (error) => {
-    setError(error);
-  };
+
   let orderItems = [];
   cartItems.map((item) => {
     orderItems.push({ item: item.item._id, quantity: item.quantity });
   });
 
-  const fullAddress = `${address}, ${town} ,${province}`;
   const toPayment = async () => {
     try {
-      if (error == undefined && province.length !== 0 && town.length !== 0) {
-        props.navigation.navigate("Payment", {
-          screen: "PaymentScreen",
-          params: {
-            fullAddress,
-            orderItems,
-            name,
-            phone,
-            total,
-            cartId,
-            carts,
-          },
-        });
-      } else {
-        alert("Vui lòng nhập đầy đủ thông tin.");
-      }
+      props.navigation.navigate("Payment", {
+        screen: "PaymentScreen",
+        params: {
+          orderItems,
+          name,
+          phone,
+          total,
+          cartId,
+          carts,
+        },
+      });
     } catch (err) {
       throw err;
     }
@@ -103,11 +84,6 @@ export const PreOrderScreen = (props) => {
       ) : (
         <>
           <ScrollView>
-            <UserForm
-              getReceiver={getReceiver}
-              checkValidation={checkValidation}
-            />
-            <Address getInfo={getInfo} />
             <SummaryOrder cartItems={cartItems} total={total} />
           </ScrollView>
           <TotalButton toPayment={toPayment} />

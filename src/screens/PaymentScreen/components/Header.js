@@ -26,14 +26,14 @@ export const Header = ({ navigation }) => {
         >
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Ionicons
-              name='ios-arrow-back'
+              name="ios-arrow-back"
               size={28}
               color={Colors.lighter_green}
             />
           </TouchableOpacity>
         </View>
         <View style={styles.orderStepsContainer}>
-          <CustomText style={styles.title}> Phương Thức Thanh Toán </CustomText>
+          <CustomText style={styles.title}> Payment Method </CustomText>
           <View style={styles.orderSteps}>
             <OrderSteps position={2} />
           </View>

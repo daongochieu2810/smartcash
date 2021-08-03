@@ -30,13 +30,13 @@ export class TotalButton extends React.PureComponent {
         <TouchableOpacity
           onPress={() => {
             /**
-             * TODO: add QR screen
+             * TODO: update payment screen
              */
-            /*navigation.navigate("PreOrderScreen", {
+            navigation.navigate("PreOrderScreen", {
               cartItems,
               total,
               cartId,
-            });*/
+            });
           }}
         >
           <View style={styles.btn}>

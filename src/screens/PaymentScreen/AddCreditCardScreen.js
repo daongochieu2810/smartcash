@@ -13,7 +13,7 @@ export const AddCreditCardScreen = ({ navigation }) => {
   const onSubmit = async (creditCardInput) => {
     // Disable the Submit button after the request is sent
     // console.log(creditCardInput);
-    setSubmitted(true);
+    /*setSubmitted(true);
     let creditCardToken;
     try {
       // Create a credit card token
@@ -32,14 +32,15 @@ export const AddCreditCardScreen = ({ navigation }) => {
       setError(STRIPE_ERROR);
       return;
     } // Send a request to your server with the received credit card token
-    navigation.navigate("PaymentScreen", { token: creditCardToken });
+    */
+    navigation.navigate("PaymentScreen", { token: { card: { last4: [] } } });
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.backIcon}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name='arrow-left' size={30} color='black' />
+          <MaterialCommunityIcons name="arrow-left" size={30} color="black" />
         </TouchableOpacity>
       </View>
       <AddSubscriptionView
